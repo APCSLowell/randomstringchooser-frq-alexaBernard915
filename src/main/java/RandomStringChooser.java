@@ -1,7 +1,7 @@
 import java.util.*;
 public class RandomStringChooser{
   //member variables 
-private Stirng [] wordArray; 
+private String [] wordArray; 
 private ArrayList <Integer> uncalledIndex; 
   //constructor
 public RandomStringChooser (String [] s){
@@ -12,10 +12,10 @@ public RandomStringChooser (String [] s){
   }
 }
   public String getNext(){
-    if(uncalledIndex.length == 0){
+    if(uncalledIndex.size() == 0){
       return ("NONE");
     }
-    int x = Math.Random()*uncalledIndex.size();
+    int x = (int)(Math.random()*uncalledIndex.size());
     String s = wordArray[uncalledIndex.get(x)];
     uncalledIndex.remove(x); 
     return s; 
